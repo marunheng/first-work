@@ -1,0 +1,97 @@
+*** Settings ***
+Library           Selenium2Library
+Library           Collections
+
+*** Test Cases ***
+干扰分析-干扰小区分析
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    mysleep
+    Comment    Wait Until Page Contains Element    //span[text()='无线网络优化专题']/parent::span/parent::div    15
+    click element    //span[text()='无线网络优化专题']/parent::span/parent::div
+    mysleep
+    Comment    Wait Until Page Contains Element    //span[text()='干扰分析']/parent::span/parent::div    15
+    click element    //span[text()='干扰分析']/parent::span/parent::div
+    mysleep
+    Comment    Wait Until Page Contains Element    //span[text()='干扰小区分析']/parent::a    15
+    click element    //span[text()='干扰小区分析']/parent::a
+    Select Frame    //iframe[@name='iframe']
+    Wait Until Page Contains Element    //span[text()='查 询']/parent::button    15
+    mysleep
+    Click Element    //span[text()='查 询']/parent::button
+    sleep    10
+    Page Should Not Contain    暂无数据    loglevel=NONE
+    Unselect Frame
+    Close All Browsers
+
+干扰分析-干扰栅格分析
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    Click Element    //i[@class='trigger anticon anticon-menu-unfold']
+    mysleep
+    Comment    Wait Until Page Contains Element    //span[text()='无线网络优化专题']/parent::span/parent::div    15
+    Click Element    //span[text()='无线网络优化专题']/parent::span/parent::div
+    mysleep
+    Comment    Wait Until Page Contains Element    //span[text()='干扰分析']/parent::span/parent::div    15
+    Click Element    //span[text()='干扰分析']/parent::span/parent::div
+    mysleep
+    Comment    Wait Until Page Contains Element    //span[text()='干扰栅格分析']/parent::a    15
+    Click Element    //span[text()='干扰栅格分析']/parent::a
+    Select Frame    //iframe[@name='iframe']
+    Wait Until Page Contains Element    //span[text()='查 询']/parent::button    15
+    mysleep
+    Click Element    //span[text()='查 询']/parent::button
+    sleep    10
+    Page Should Not Contain    暂无数据    loglevel=NONE
+    Unselect Frame
+    Close All Browsers
+
+地理化栅格分析-地理区域栅格分析
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    mysleep
+    Comment    Wait Until Page Contains Element    //span[text()='无线网络优化专题']/parent::span/parent::div    15
+    click element    //span[text()='无线网络优化专题']/parent::span/parent::div
+    mysleep
+    Comment    Wait Until Page Contains Element    //span[text()='地理化栅格分析']/parent::span/parent::div    15
+    click element    //span[text()='地理化栅格分析']/parent::span/parent::div
+    mysleep
+    Comment    Wait Until Page Contains Element    //span[text()='地理区域栅格分析']/parent::a    15
+    click element    //span[text()='地理区域栅格分析']/parent::a
+    waitwindow
+    Select Window    地理区域栅格分析
+    sleep    1
+    Wait Until Page Contains Element    //*[@id="selectSround"]    15
+    Click Element    //*[@id="selectSround"]
+    sleep    1
+    Wait Until Page Contains Element    //*[@id="selectSround"]/option[2]
+    Click Element    //*[@id="selectSround"]/option[2]
+    sleep    1
+    Wait Until Page Contains Element    //*[@style="margin-left:10px;width:80px;float:left;"]/span
+    Click Element    //*[@style="margin-left:10px;width:80px;float:left;"]/span
+    sleep    5
+    Page Should Not Contain    NoData!
+    Close All Browsers
+
+地理化栅格分析-小区级栅格分析
+                    小区级栅格分析
+
+*** Keywords ***
+userlogin
+    open browser    http://10.217.8.18:25017/user/login
+    Set Window Size    900    1100
+    Comment    Maximize Browser Window
+    Set Selenium Implicit Wait    5
+    Input Text    //*[@id='username']    auto_test
+    Input Text    //*[@id='password']    2wsx@WSX
+    Click Element    //button[@class='login-button ant-btn ant-btn-primary ant-btn-lg']
+    Wait Until Page Contains Element    //span[@class='header-notice']
+    page should contain element    //span[@class='header-notice']
+
+mysleep
+    sleep    2
+
+waitwindow
+    sleep    3

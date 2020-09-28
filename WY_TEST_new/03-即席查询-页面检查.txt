@@ -1,0 +1,645 @@
+*** Settings ***
+Library           Selenium2Library
+Library           Collections
+
+*** Test Cases ***
+性能与配置查询-多层网不均衡评估
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='多层网']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='多层网']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='多层网不均衡评估']/parent::a    15
+    mysleep
+    click element    //span[text()='多层网不均衡评估']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-多层网基础库(60度)
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='多层网']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='多层网']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='多层网基础库(60度)']/parent::a    15
+    mysleep
+    click element    //span[text()='多层网基础库(60度)']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-LTE性能指标
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='LTE']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='LTE']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='LTE性能指标']/parent::a    15
+    mysleep
+    click element    //span[text()='LTE性能指标']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //*[@onclick='QueryPage.runQuery()' and text()='查询']    15
+    click element    //*[@onclick='QueryPage.runQuery()' and text()='查询']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-LTE高负荷指标(小区级)
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='LTE']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='LTE']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='LTE高负荷指标(小区级)']/parent::a    15
+    mysleep
+    click element    //span[text()='LTE高负荷指标(小区级)']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //*[@onclick='QueryPage.runQuery()' and text()='查询']//parent::div    15
+    click element    //*[@onclick='QueryPage.runQuery()' and text()='查询']//parent::div
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-LTE现网工参查询
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='LTE']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='LTE']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='LTE现网工参查询']/parent::a    15
+    mysleep
+    click element    //span[text()='LTE现网工参查询']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-LTE-PRB100干扰指标
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='LTE']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='LTE']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='LTE-PRB100干扰指标']/parent::a    15
+    mysleep
+    click element    //span[text()='LTE-PRB100干扰指标']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-VOLTE性能指标
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='VOLTE']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='VOLTE']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='VOLTE性能指标']/parent::a    15
+    mysleep
+    click element    //span[text()='VOLTE性能指标']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']/parent::div    15
+    click element    //a[@onclick='QueryPage.runQuery()']/parent::div
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-VOLTE质差指标(小区级)
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='VOLTE']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='VOLTE']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='VOLTE质差指标(小区级)']/parent::a    15
+    mysleep
+    click element    //span[text()='VOLTE质差指标(小区级)']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']/parent::div    15
+    click element    //a[@onclick='QueryPage.runQuery()']/parent::div
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-VOLTE感知报表
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='VOLTE']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='VOLTE']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='VOLTE感知报表']/parent::a    15
+    mysleep
+    click element    //span[text()='VOLTE感知报表']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']/parent::div    15
+    click element    //a[@onclick='QueryPage.runQuery()']/parent::div
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-NB现网工参查询
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='NB']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='NB']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='NB现网工参查询']/parent::a    15
+    mysleep
+    click element    //span[text()='NB现网工参查询']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-NB性能指标
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='NB']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='NB']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='NB性能指标']/parent::a    15
+    mysleep
+    click element    //span[text()='NB性能指标']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-5G性能指标查询(总)
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='5G']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='5G']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='5G性能数据指标查询(总)']/parent::a    15
+    mysleep
+    click element    //span[text()='5G性能数据指标查询(总)']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']/parent::div    15
+    click element    //a[@onclick='QueryPage.runQuery()']/parent::div
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-5G小区PRB平均干扰查询(总)
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='5G']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='5G']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='5G小区PRB平均干扰查询(总)']/parent::a    15
+    mysleep
+    click element    //span[text()='5G小区PRB平均干扰查询(总)']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']/parent::div    15
+    click element    //a[@onclick='QueryPage.runQuery()']/parent::div
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-5G现网工参查询
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='5G']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='5G']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='5G现网工参查询']/parent::a    15
+    mysleep
+    click element    //span[text()='5G现网工参查询']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']/parent::div    15
+    click element    //a[@onclick='QueryPage.runQuery()']/parent::div
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-5G现网参数查询
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='5G']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='5G']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='5G现网参数查询']/parent::a    15
+    mysleep
+    click element    //span[text()='5G现网参数查询']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']/parent::div    15
+    click element    //a[@onclick='QueryPage.runQuery()']/parent::div
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-GSM现网工参查询
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='2G']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='2G']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='GSM现网工参查询']/parent::a    15
+    mysleep
+    click element    //span[text()='GSM现网工参查询']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-GSM性能指标
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='2G']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='2G']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='GSM性能指标']/parent::a    15
+    mysleep
+    click element    //span[text()='GSM性能指标']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-GSM考核指标查询
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='2G']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='2G']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='GSM考核指标查询']/parent::a    15
+    mysleep
+    click element    //span[text()='GSM考核指标查询']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-MRE_LTE_GSM邻区详情查询
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='MR']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='MR']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='MRE_LTE_GSM邻区详情查询']/parent::a    15
+    mysleep
+    click element    //span[text()='MRE_LTE_GSM邻区详情查询']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-MRE_LTE_LTE邻区详情查询
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='MR']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='MR']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='MRE_LTE_LTE邻区详情查询']/parent::a    15
+    mysleep
+    click element    //span[text()='MRE_LTE_LTE邻区详情查询']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-MRS_未采集到MRS小区详表
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='MR']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='MR']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='MRS_未采集到MRS小区详表']/parent::a    15
+    mysleep
+    click element    //span[text()='MRS_未采集到MRS小区详表']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-MRS指标查询
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='MR']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='MR']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='MRS_指标查询']/parent::a    15
+    mysleep
+    click element    //span[text()='MRS_指标查询']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-其他查询-LTE侧1.0.2版本性能指标
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='其它查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='其它查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='LTE侧1.0.2版本性能指标']/parent::a    15
+    mysleep
+    click element    //span[text()='LTE侧1.0.2版本性能指标']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-其他查询-NR侧1.0.2版本性能指标
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='其它查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='其它查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='NR侧1.0.2版本性能指标']/parent::a    15
+    mysleep
+    click element    //span[text()='NR侧1.0.2版本性能指标']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    mysleep
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-其他查询-高负荷数据模板查询
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='其它查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='其它查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='高负荷数据模板查询']/parent::a    15
+    mysleep
+    click element    //span[text()='高负荷数据模板查询']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    mysleep
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-其他查询-小区级利用率调研表
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='其它查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='其它查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='小区级利用率调研表']/parent::a    15
+    mysleep
+    click element    //span[text()='小区级利用率调研表']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-其他查询-LTE集中入网后评估指标
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='其它查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='其它查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='LTE集中入网后评估指标']/parent::a    15
+    mysleep
+    click element    //span[text()='LTE集中入网后评估指标']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+性能与配置查询-其他查询-LTE节日保障指标查询
+    userlogin
+    Wait Until Page Contains Element    //i[@class='trigger anticon anticon-menu-unfold']    15
+    click element    //i[@class='trigger anticon anticon-menu-unfold']
+    Comment    Wait Until Page Contains Element    //span[text()='性能与配置查询']/parent::span/parent::div    15
+    click element    //span[text()='性能与配置查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='其它查询']/parent::span/parent::div    15
+    mysleep
+    click element    //span[text()='其它查询']/parent::span/parent::div
+    Comment    Wait Until Page Contains Element    //span[text()='LTE节日保障指标查询']/parent::a    15
+    mysleep
+    click element    //span[text()='LTE节日保障指标查询']/parent::a
+    waitwindow
+    select window    河南移动网络优化管理系统
+    Wait Until Page Contains Element    //a[@onclick='QueryPage.runQuery()']    15
+    click element    //a[@onclick='QueryPage.runQuery()']
+    sleep    10
+    Page Should Not Contain    没有符合条件的数据    loglevel=NONE
+    Page Should Contain    共
+    Close All Browsers
+
+*** Keywords ***
+userlogin
+    open browser    http://10.217.8.18:25017/user/login
+    Set Window Size    900    1100
+    Comment    Maximize Browser Window
+    Set Selenium Implicit Wait    5
+    Input Text    //*[@id='username']    auto_test
+    Input Text    //*[@id='password']    2wsx@WSX
+    Click Element    //button[@class='login-button ant-btn ant-btn-primary ant-btn-lg']
+    Wait Until Page Contains Element    //span[@class='header-notice']
+    page should contain element    //span[@class='header-notice']
+
+logout
+    click element    //span[@class='action ant-dropdown-link user-dropdown-menu ant-dropdown-trigger']
+    click element    //i[@class='anticon anticon-logout']
+    sleep    1
+    click element    //span[text()='确 定']/parent::button
+
+mysleep
+    sleep    2
+
+waitwindow
+    sleep    3
